@@ -1,0 +1,23 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		String a="Merhaba";
+		System.out.println(a+" Hoşgeldiniz...");
+		
+		String b="Java";
+		String c="Programlama";
+		String d="Dili";
+		
+		String toplam=b+c+d;
+		System.out.println("Toplam : "+toplam);
+		
+		String k="Merhaba";
+		int z=35;
+		String h=k+z;
+		System.out.println("h : "h);
+
+	}
+
+}
