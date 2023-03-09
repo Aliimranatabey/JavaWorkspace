@@ -36,11 +36,7 @@ public class Main {
 		
 		
 		
-		/*for(String Ipassword : slist) {
-			if(Ipassword==strUserNewPassword) {
-				System.out.println("GİRİLEN ŞİFRE ÖNCEKİ 5 ŞİFREDEN BİRİ OLAMAZ");
-			}
-		}*/
+		
 
 	}
 
