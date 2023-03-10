@@ -13,7 +13,9 @@ public class Main {
 		System.out.println("Age1 : "+age1+" Age2 : "+age2+" Age3 : "+age3);
 		
 		int age=scan.nextInt();
+		/**/
 		scan.nextLine();  // DUMMY
+		/**/
 		String name=scan.nextLine();
 		System.out.println("Age : "+age);
 		System.out.println("Name : "+name);
