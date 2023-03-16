@@ -28,16 +28,7 @@ public class Main {
 		System.out.println("k : "+k);
 		System.out.println("t : "+t);
 		System.out.println("z : "+z);
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
+	
 	}
 
 }
