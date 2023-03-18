@@ -15,31 +15,23 @@ public class Main {
 		 
 		 */
 		
-		Scanner scan=new Scanner(System.in);
-		System.out.print("ARMSTRONG sayı olup olmadığını merak ettiğiniz sayıyı giriniz => ");
-		int number=scan.nextInt();
-		int[] numeral= {};
-		int total=0;
-		int i=0;
-		int j=0;
-		do {
-			
-			numeral[i]=number%10;
-			number=number/10;
-			i++;
-			if(number>=1 || number<10) {
-				total=numeral[j]^i;
-				j++;
-				if(j>i) {
-					System.out.println("Döngüden çıkıldı ...!");
-				}
-				continue;
-			}
-			
-		}while(number<1);
-		
-		System.out.println("Girilen sayı : "+number+" total : "+total);
-
+	Scanner scan=new Scanner(System.in);
+	System.out.print("Armstrong olup olmadığını sorgulayacak bir sayı giriniz : ");
+	int number=scan.nextInt();
+	System.out.print("Basamak sayısını giriniz : ");
+	int numeral=scan.nextInt();
+	int value=number;
+	int total=0;
+	do {
+		total=(int) (total+(Math.pow(value%10, numeral)));
+		value=value/10;
+	}while(value>=1);
+	if(total==number) {
+		System.out.println("Girdiğiniz sayı bir armstrong sayıdır (girilen sayı : ) "+number+" (armstrong değeri : ) "+total);
+	}else {
+		System.out.println("Girdiğiniz sayı bir armstrong sayı değildir ! (girilen sayı : ) "+number+" (armstrong değeri : ) "+total);
+	}
+	
 	}
 
 }
