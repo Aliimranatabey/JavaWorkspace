@@ -14,6 +14,7 @@ public class Main {
 		}else {
 			System.out.println("Aynı objeyi göstermiyorlar ...");
 		}
+		
 		new Account("1455555553123",123,"Ahmet Can Demir","ahmetcandemir@gmail.com","05555333355").depositMoney(45);
 
 	}
