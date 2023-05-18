@@ -19,7 +19,8 @@ public class Main {
 
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
-			System.out.println("1 => UÇUŞ BİLGİLERİ GİR \n" + "2 => SİSTEMDEN ÇIKIŞ YAP \n");
+			System.out.println("LÜTFEN YAPMAK İSTEDİĞİNİZ İŞLEMİN NUMARASINI GİRİNİZ : \n \n"
+					+ "1 => UÇUŞ BİLGİLERİ GİR \n" + "2 => SİSTEMDEN ÇIKIŞ YAP \n"+"======> \n");
 			String sec = scanner.nextLine();
 			if (sec.equals("1")) {
 				System.out.print("Uçuştaki Yetişkin Sayısı : ");
@@ -34,66 +35,69 @@ public class Main {
 				System.out.println("Uçuş Numarasını Giriniz : ");
 				String numara = scanner.nextLine();
 
-				List<Yolcu> yolcuAdedi = new ArrayList<>();
+				List<Yolcu> yolcuSayisi = new ArrayList<>();
 				Yolcu yolcu = new Yolcu();
 				yolcu.setYetiskin(yetiskinSayisi);
 				yolcu.setCocuk(cocukSayisi);
 				yolcu.setBebek(bebekSayisi);
-				yolcuAdedi.add(yolcu);
+				yolcuSayisi.add(yolcu);
 
 				List<Gelen> gelenListesi = new ArrayList<>();
 				Gelen gelen = new Gelen();
 				gelen.setUcusTarihi(ucusTarihi);
 				gelen.setUcusNumarasi(numara);
-				gelen.setYolcuAdedi(yolcuAdedi);
+				gelen.setYolcuAdedi(yolcuSayisi);
 				gelenListesi.add(gelen);
 
-				Ichat ichat = new Ichat(gelenListesi, 650, 350, 200);
-				Dishat dıshat = new Dishat(gelenListesi, 2400, 1850, 1000);
+				Ichat icHat = new Ichat(gelenListesi, 650, 350, 200);
+				Dishat disHat = new Dishat(gelenListesi, 2400, 1850, 1000);
 
 				while (true) {
 					System.out.print("***Ucus Bilgilerini Ogrenmek İstediginiz Hattı seçiniz : ***\n" + "1 => Iç Hat \n"
 							+ "2 => Dış Hat \n" + "3 => Yeni Uçuş Bilgileri Gir");
 					String hatSecimi = scanner.nextLine();
-					for (int i = 0; i < ichat.getGelenListesi().size(); i++) {
+					for (int i = 0; i < icHat.getGelenListesi().size(); i++) {
 						if (hatSecimi.equals("1")) {
 							System.out.println("Ucus Bilgileri ; \n" + "Ucus Tarihi : "
-									+ ichat.getGelenListesi().get(i).getUcusTarihi() + "\n" + "Ucus Numarasi : "
-									+ ichat.getGelenListesi().get(i).getUcusNumarasi() + "\n" + "* YOLCU BILGILERI * \n"
+									+ icHat.getGelenListesi().get(i).getUcusTarihi() + "\n" + "Ucus Numarasi : "
+									+ icHat.getGelenListesi().get(i).getUcusNumarasi() + "\n" + "* YOLCU BILGILERI * \n"
 									+ "Yetiskin Sayisi : "
-									+ ichat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin() + "\n"
+									+ icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin() + "\n"
 									+ "Cocuk Sayisi : "
-									+ ichat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk() + "\n"
+									+ icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk() + "\n"
 									+ "Bebek Sayisi : "
-									+ ichat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek() + "\n"
+									+ icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek() + "\n"
 									+ "TOPLAM UCRET TUTARİ : "
-									+ ichat.gelenUcretHesaplama(
-											ichat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin(),
-											ichat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk(),
-											ichat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek())
+									+ icHat.gelenUcretHesaplama(
+											icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin(),
+											icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk(),
+											icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek())
 									+ " € + KDV");
 						} else if (hatSecimi.equals("2")) {
 							System.out.println("Ucus Bilgileri ; \n" + "Ucus Tarihi : "
-									+ dıshat.getGelenListesi().get(i).getUcusTarihi() + "\n" + "Ucus Numarasi : "
-									+ dıshat.getGelenListesi().get(i).getUcusNumarasi() + "\n"
-									+ "* YOLCU BILGILERI *  \n" + "Yetiskin Sayisi : "
-									+ dıshat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin() + "\n"
+									+ disHat.getGelenListesi().get(i).getUcusTarihi() + "\n" + "Ucus Numarasi : "
+									+ disHat.getGelenListesi().get(i).getUcusNumarasi() + "\n"
+									+ "* YOLCU BILGILERI *  \n" 
+									+ "Yetiskin Sayisi : "
+									+ disHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin() + "\n"
+									+ "Cocuk Sayisi : "
+									+ icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk() + "\n"
 									+ "Bebek Sayisi : "
-									+ dıshat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek() + "\n"
+									+ disHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek() + "\n"
 									+ "TOPLAM UCRET TUTARİ : "
-									+ dıshat.gelenUcretHesaplama(
-											dıshat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin(),
-											dıshat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk(),
-											dıshat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek())
+									+ disHat.gelenUcretHesaplama(
+											disHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin(),
+											disHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk(),
+											disHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek())
 									+ " € + KDV");
-						} else {
-							System.out.println("GEÇERSİZ GİRİŞ !");
-							break;
-						}
+						} 
 					}
 					if (hatSecimi.equals("3")) {
-						System.out.println("YENİ BİLGİLER GİRMENİZ İÇİN YÖNLENDİRİLİYORSUNUZ ...");
+						System.out.println("YENİ BİLGİLER GİRMENİZ İÇİN YÖNLENDİRİLİYORSUNUZ ... \n \n \n ******************************** \n \n");
 						break;
+					}else if(!hatSecimi.equals("3") && !hatSecimi.equals("2") && !hatSecimi.equals("1")) {
+						System.out.println("GEÇERSİZ GİRİŞ !");
+						continue;
 					}
 				}
 			} else if (sec.equals("2")) {
