@@ -17,9 +17,6 @@ public class Main {
 		 * sayfayı refresh etmeden nasıl ekranda güncelleriz ?
 		 */
 		
-		/*Ekranda anlık güncellemeler yapmak için Java'da kullanabileceğiniz bir yöntem, AJAX teknolojisi veya WebSocket
-        kullanarak arka planda sunucuyla iletişim kurmaktır. Bu sayede sunucudaki verileri dinamik olarak güncelleyebilir ve
-        sayfayı yenilemeden ekrana yansıtabiliriz ANCAK BEN BACKEND ÜZERİNDE OOP yi KULLANMAMI İSTEDİĞİNİ DÜŞÜNDÜM .*/
 
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
