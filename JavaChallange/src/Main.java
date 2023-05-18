@@ -16,12 +16,11 @@ public class Main {
 		 * beklenmektedir ve ekranda anlık değiştirilmesi istenmektedir. Bu değişikliği
 		 * sayfayı refresh etmeden nasıl ekranda güncelleriz ?
 		 */
-		
 
 		Scanner scanner = new Scanner(System.in);
 		while (true) {
 			System.out.println("LÜTFEN YAPMAK İSTEDİĞİNİZ İŞLEMİN NUMARASINI GİRİNİZ : \n \n"
-					+ "1 => UÇUŞ BİLGİLERİ GİR \n" + "2 => SİSTEMDEN ÇIKIŞ YAP \n"+"======> \n");
+					+ "1 => UÇUŞ BİLGİLERİ GİR \n" + "2 => SİSTEMDEN ÇIKIŞ YAP \n" + "======> \n");
 			String sec = scanner.nextLine();
 			if (sec.equals("1")) {
 				System.out.print("Uçuştaki Yetişkin Sayısı : ");
@@ -78,8 +77,7 @@ public class Main {
 							System.out.println("Ucus Bilgileri ; \n" + "Ucus Tarihi : "
 									+ disHat.getGelenListesi().get(i).getUcusTarihi() + "\n" + "Ucus Numarasi : "
 									+ disHat.getGelenListesi().get(i).getUcusNumarasi() + "\n"
-									+ "* YOLCU BILGILERI *  \n" 
-									+ "Yetiskin Sayisi : "
+									+ "* YOLCU BILGILERI *  \n" + "Yetiskin Sayisi : "
 									+ disHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin() + "\n"
 									+ "Cocuk Sayisi : "
 									+ icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk() + "\n"
@@ -91,12 +89,13 @@ public class Main {
 											disHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk(),
 											disHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek())
 									+ " € + KDV \n \n \n \n");
-						} 
+						}
 					}
 					if (hatSecimi.equals("3")) {
-						System.out.println("YENİ BİLGİLER GİRMENİZ İÇİN YÖNLENDİRİLİYORSUNUZ ... \n \n \n ******************************** \n \n");
+						System.out.println(
+								"YENİ BİLGİLER GİRMENİZ İÇİN YÖNLENDİRİLİYORSUNUZ ... \n \n \n ******************************** \n \n");
 						break;
-					}else if(!hatSecimi.equals("3") && !hatSecimi.equals("2") && !hatSecimi.equals("1")) {
+					} else if (!hatSecimi.equals("3") && !hatSecimi.equals("2") && !hatSecimi.equals("1")) {
 						System.out.println("GEÇERSİZ GİRİŞ !");
 						continue;
 					}
