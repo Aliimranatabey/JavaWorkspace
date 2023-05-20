@@ -10,4 +10,10 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="Hesaplama"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Resolution"/>
+    <fullyQualifiedTypeName name="Monitor"/>
+    <fullyQualifiedTypeName name="Anakart"/>
+    <fullyQualifiedTypeName name="Bilgisayar"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="GelismisAbone"/>
 </qualifiedTypeNameHistroy>
