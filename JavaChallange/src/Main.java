@@ -72,7 +72,7 @@ public class Main {
 											icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getYetiskin(),
 											icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getCocuk(),
 											icHat.getGelenListesi().get(i).getYolcuAdedi().get(i).getBebek())
-									+ " € + KDV");
+									+ " € + KDV \n \n \n \n");
 						} else if (hatSecimi.equals("2")) {
 							System.out.println("Ucus Bilgileri ; \n" + "Ucus Tarihi : "
 									+ disHat.getGelenListesi().get(i).getUcusTarihi() + "\n" + "Ucus Numarasi : "
