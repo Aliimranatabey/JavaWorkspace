@@ -12,15 +12,41 @@ import static java.util.stream.Collectors.toList;
 
 class Result {
 	public static int uniqueWolfs(List<Integer> arr) {
+		// Dizi uzunluğu kontrolü
+		if (arr.size() < 5 || arr.size() > 2 * Math.pow(10, 5)) {
+			throw new IllegalArgumentException("Dizi uzunluğu 5 ile 2x10^5 arasında olmalıdır.");
+		}
+
+		// Eleman değerleri kontrolü
+		for (int tur : arr) {
+			if (tur < 1 || tur > 5) {
+				throw new IllegalArgumentException("Geçersiz eleman değeri. Elemanlar 1, 2, 3, 4 veya 5 olmalıdır.");
+			}
+		}
+
+		// Her kurt türünün sayısını tutmak için bir harita oluşturulur
 		Map<Integer, Integer> counter = new HashMap<>();
 
+		// Dizideki her bir elemanı kontrol eder
 		for (int tur : arr) {
+			// Geçerli tür, haritada bulunan değerine 1 eklenerek güncellenir
 			counter.put(tur, counter.getOrDefault(tur, 0) + 1);
 		}
 
-		int enSıkTur = Collections.max(counter.entrySet(), Map.Entry.comparingByValue()).getKey();
-		int enDusukID = Integer.MAX_VALUE;
+		// En sık tespit edilen kurt türünün ID'sini bulma
+		int enSıkTur = 0;
+		int maksimumSayi = 0;
+		for (Map.Entry<Integer, Integer> entry : counter.entrySet()) {
+			int tur = entry.getKey();
+			int sayi = entry.getValue();
+			if (sayi > maksimumSayi) {
+				enSıkTur = tur;
+				maksimumSayi = sayi;
+			}
+		}
 
+		// En sık tespit edilen kurt türünün en düşük ID'sini bulma
+		int enDusukID = Integer.MAX_VALUE;
 		for (int tur : arr) {
 			if (tur == enSıkTur && tur < enDusukID) {
 				enDusukID = tur;
