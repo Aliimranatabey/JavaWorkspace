@@ -14,7 +14,6 @@
     <fullyQualifiedTypeName name="Monitor"/>
     <fullyQualifiedTypeName name="Anakart"/>
     <fullyQualifiedTypeName name="Bilgisayar"/>
-    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="GelismisAbone"/>
     <fullyQualifiedTypeName name="Dog"/>
     <fullyQualifiedTypeName name="Horse"/>
@@ -23,4 +22,6 @@
     <fullyQualifiedTypeName name="BeybladeFabrikasi"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
 </qualifiedTypeNameHistroy>
