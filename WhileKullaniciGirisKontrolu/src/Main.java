@@ -4,7 +4,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
+		/*Scanner scan = new Scanner(System.in);
 		int rightOfEntry = 3;
 		String username = "Ali Imran";
 		String password = "Atabey";
@@ -34,6 +34,14 @@ public class Main {
 				System.out.println("HAKKINIZ KALMADI ! :(");
 				break;
 			}
+		}*/
+		
+		String[] name= {"ali"};
+		String[] surname={"ali"};
+		if(name==surname) {
+			System.out.println("Eştiler");
+		}else {
+			System.out.println("Değiller");
 		}
 	}
 

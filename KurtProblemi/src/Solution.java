@@ -24,12 +24,12 @@ class Result {
 			}
 		}
 
-		// Her kurt türünün sayısını tutmak için bir harita oluşturulur
+		// Her kurt türünün sayısını tutmak için bir MAP oluşturulur
 		Map<Integer, Integer> counter = new HashMap<>();
 
 		// Dizideki her bir elemanı kontrol eder
 		for (int tur : arr) {
-			// Geçerli tür, haritada bulunan değerine 1 eklenerek güncellenir
+			// Geçerli tür, MAP'de bulunan değerine 1 eklenerek güncellenir
 			counter.put(tur, counter.getOrDefault(tur, 0) + 1);
 		}
 
